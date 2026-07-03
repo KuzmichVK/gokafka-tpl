@@ -1,1 +1,10 @@
-
+kafka:
+  brokers:
+    - "localhost:9092"
+  topics:
+    - "main_topic"
+  group_id: "go-kafka-consumer-group"
+  auto_commit_interval: 5s
+  retry_count: 3
+  retry_delay: 1s
+  partition_strategy: "round_robin"
